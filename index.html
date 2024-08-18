@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-COMMERCE UI WITH DYNAMIC CART FUNCTIONALITY"/>
+    <meta name="keywords"content="JAVASCRIPT, MONTHLY SALARY EXPENSES, CALCULATE SALARY EXPENSES, Ashaduzzaman,Sazid,Ashaduzzaman (Sazid)"/>
+    <meta name="author" content="Ashaduzzaman Sazid"/>
+    <title>Summer Sale</title>
+    <link rel="shortcut icon" href="images/Summer1.png" type="image/x-icon">
+    <!----- DaisyUI & Tailwind-Link ----->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google-Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap-Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex flex-col lg:flex-row justify-between items-center bg-[#F9F6E2] gap-9 lg:gap-0 px-6 lg:px-44 py-8 lg:py-12">
+        <aside>
+            <h2 class="text-center font-medium text-xl text-[#111111]">---SALE FEVER---</h2>
+            <h1 class="mt-6 w-[360px] lg:w-[400px] text-center text-[#111111] font-bold text-[32px] lg:text-4xl">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
+            <div class="flex justify-center gap-3 mt-11">
+                <h3 class="font-medium text-lg text-[#111111]">Use Promo Code</h3>
+                <button class="bg-[#E527B2] font-medium text-white px-2 py-1 rounded active:bg-[#b80989]" type="submit">SELL200</button>
+            </div>
+        </aside>
+        <aside>
+            <img class="w-[500px]" src="images/Summer1.png" alt="">
+        </aside>
+    </header>
+    <main class="bg-[#1111110e] flex flex-col lg:flex-row justify-between gap-14 lg:gap-6 px-6 lg:px-36 py-24">
+        <aside>
+            <section>
+                <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Kitchenware</h1>
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod1.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Spoon Set</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">139.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod2.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Bred Maker</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">179.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod3.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Home Cooker</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">225.00 $</h2>
+                    </aside>
+                </div>
+            </section>
+            <section class="mt-20 lg:mt-12">
+                <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Sportswear</h1>
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod4.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Sports Back Cap</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">69.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod5.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Full Jersey Set</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">189.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod6.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Sports cates</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">159.00 $</h2>
+                    </aside>
+                </div>
+            </section>
+            <section class="mt-20 lg:mt-12">
+                <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Furniture</h1>
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod7.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Single Relax Chair</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">235.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod8.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Children play</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">215.00 $</h2>
+                    </aside>
+                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
+                            <img src="images/prod9.png" alt="">
+                        </div>
+                        <div class="text-[#FFC107] flex justify-center mt-4">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Flexible Sofa</h2>
+                        <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">299.00 $</h2>
+                    </aside>
+                </div>
+            </section>
+        </aside>
+        <aside class="flex flex-col gap-7 w-[325px] lg:w-[260px] mt-[48px]">
+            <section class="bg-[#FFFFFF] p-8 lg:p-3 rounded">
+                <h2 class="text-[#111111] font-semibold text-lg">Have coupon?</h2>
+                <div class="flex mt-2">
+                    <input class="border-solid border-[1px] border-[#11111150] rounded-l-lg p-2 w-[191px] lg:w-[147px]" type="text" placeholder="Coupon code">
+                    <button class="bg-[#E527B2] hover:opacity-80 active:bg-[#920b6e] px-3 font-medium text-white rounded-r-lg" type="submit">Apply</button>
+                </div>
+            </section>
+            <section class="bg-[#FFFFFF] p-8 lg:p-3 rounded">
+                <div class=""></div>
+                <div class="my-4 rounded bg-[#1111111f] h-[1px]"></div>
+                <div class="">
+                    <h2 class="text-[#111111] font-semibold text-lg">Total price : <span class="text-[#11111160]">00<span> $</span></span></h2>
+                    <h2 class="text-[#111111] font-semibold text-lg">Discount price : <span class="text-[#11111160]">00<span> $</span></span></h2>
+                    <h2 class="text-[#111111] font-semibold text-lg">Total : <span class="text-[#11111160]">00<span> $</span></span></h2>
+                </div>
+                <div class="my-4 rounded bg-[#1111111f] h-[1px]"></div>
+                <button onclick="openModalWithDelay()" class="bg-[#E527B2] hover:opacity-80 active:bg-[#920b6e] w-full py-2 font-medium text-white rounded-lg" type="submit">Make Purchase</button>
+                <dialog id="my_modal" class="modal">
+                    <div class="modal-box flex flex-col items-center gap-3 w-84 lg:w-96 py-8 lg:py-10 rounded-md">
+                        <img class="w-32" src="images/congo.png" alt="">
+                        <h1 class="mt-2 font-bold text-[#111111] text-4xl">Congratulations</h1>
+                        <p class="font-medium text-[#11111160]">You Purchase the product</p>
+                        <button class="mt-5 bg-[#E527B2] font-medium text-white px-3 py-2 rounded-md hover:opacity-80" type="submit"><a href="index.html" class="active:text-[#e734b7]">Go Home</a></button>
+                    </div>
+                </dialog>
+            </section>
+        </aside>
+    </main>
+    <script src="js/cart.js"></script>
+</body>
+</html>
