@@ -16,16 +16,13 @@ function calculatePrice(productName, productPrice) {
     totalPrice += productPrice;
     const totalPriceElement = document.getElementById("total-price");
     totalPriceElement.innerText = totalPrice;
-
     // Apply discount if valid coupon code is applied
     if (couponCode === "SELL200") {
         applyDiscount();
     }
-
     // Update or create a product entry in the cart
     const entryProduct = document.getElementById("entryProduct");
     const existingProductDiv = document.getElementById(`product-${productName}`);
-
     if (existingProductDiv) {
         // If the product already exists, update the quantity
         const quantitySpan = existingProductDiv.querySelector('.product-quantity');
@@ -40,11 +37,9 @@ function calculatePrice(productName, productPrice) {
         productDiv.innerHTML = `
             <div class="flex items-center mb-1">
                 <span class="font-semibold text-lg mr-2">${productCounter}.</span>
-                <div class="flex-1">
-                    <span class="font-semibold text-lg text-gray-800 product-name">${productName}</span>
-                </div>
+                <span class="font-semibold text-lg text-gray-800 product-name">${productName}</span>
             </div>
-            <div class="flex items-center ml-[25px]">
+            <div class="flex ml-[25px]">
                 <span class="text-gray-400 product-price text-lg">${productPrice} \$</span>
                 <span class="ml-2 text-gray-400 text-lg">X <span class="product-quantity text-lg ml-1">1</span></span>
             </div>
