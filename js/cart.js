@@ -15,10 +15,9 @@ function calculatePrice(productName, productPrice) {
     // Update the total price
     totalPrice += productPrice;
     const totalPriceElement = document.getElementById("total-price");
-    totalPriceElement.innerText = totalPrice;
-
-    // Apply discount if valid coupon code is applied
-    if (couponCode === "SELL200") {
+    totalPriceElement.innerText = `${totalPrice} $`;
+    // Apply discount if valid coupon code is applied and totalPrice > 200
+    if (couponCode === "SELL200" && totalPrice > 200) {
         applyDiscount();
     }
     // Update or create a product entry in the cart
@@ -48,7 +47,6 @@ function calculatePrice(productName, productPrice) {
         entryProduct.appendChild(productDiv);
         productCounter++; // Increment the counter for the next product
     }
-
     // Check if there are any products in the cart
     togglePurchaseButton();
 }
@@ -57,20 +55,26 @@ function calculatePrice(productName, productPrice) {
 function getValidCoupon() {
     const inputField = document.getElementById("input-coupon-field");
     couponCode = inputField.value;
-    // Recalculate discount if a valid coupon is applied
-    if (couponCode === "SELL200") {
+    // Recalculate discount if a valid coupon is applied and totalPrice > 200
+    if (couponCode === "SELL200" && totalPrice > 200) {
         applyDiscount();
     }
 }
 
 // Function-3: Apply discount based on coupon
 function applyDiscount() {
-    const discountPercent = 20;
-    const discountAmount = (totalPrice * discountPercent) / 100;
-    const discountedPrice = totalPrice - discountAmount;
-    // Update discount and total in the DOM
-    document.getElementById("discount-price").innerText = discountAmount;
-    document.getElementById("total").innerText = discountedPrice;
+    if (totalPrice > 200) {
+        const discountPercent = 20;
+        const discountAmount = (totalPrice * discountPercent) / 100;
+        const discountedPrice = totalPrice - discountAmount;
+        // Update discount and total in the DOM
+        document.getElementById("discount-price").innerText = `${discountAmount} $`;
+        document.getElementById("total").innerText = `${discountedPrice} $`;
+    } else {
+        // If totalPrice <= 200, no discount is applied
+        document.getElementById("discount-price").innerText = `0 $`;
+        document.getElementById("total").innerText = `${totalPrice} $`;
+    }
 }
 
 // Function-4: to set coupon code
@@ -88,11 +92,10 @@ function togglePurchaseButton() {
     if (entryProduct.children.length > 0) {
         purchaseButton.disabled = false;
         purchaseButton.classList.remove('opacity-50', 'cursor-not-allowed');
-        purchaseButton.classList.add('hover:bg-pink-700', 'hover:border-pink-700');
+        purchaseButton.classList.add('hover:opacity-80', 'active:bg-[#920b6e]');
     } else {
         purchaseButton.disabled = true;
         purchaseButton.classList.add('opacity-50', 'cursor-not-allowed');
-        purchaseButton.classList.remove('hover:bg-pink-700', 'hover:border-pink-700');
     }
 }
 
