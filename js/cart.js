@@ -63,7 +63,7 @@ function getValidCoupon() {
 
 // Function-3: Apply discount based on coupon
 function applyDiscount() {
-    if (totalPrice > 200) {
+    if (totalPrice > 199) {
         const discountPercent = 20;
         const discountAmount = (totalPrice * discountPercent) / 100;
         const discountedPrice = totalPrice - discountAmount;
