@@ -30,7 +30,7 @@
             <h1 class="mt-6 w-[360px] lg:w-[400px] text-center text-[#111111] font-bold text-[32px] lg:text-4xl">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
             <div class="flex justify-center gap-3 mt-11">
                 <h3 class="font-medium text-lg text-[#111111]">Use Promo Code</h3>
-                <button class="bg-[#E527B2] font-medium text-white px-2 py-1 rounded active:bg-[#b80989]" type="submit">SELL200</button>
+                <button class="bg-[#E527B2] font-medium text-white px-2 py-1 rounded active:bg-[#b80989]" type="submit" id="promote-coupon-code" onclick="setCouponCode()">SELL200</button>
             </div>
         </aside>
         <aside>
@@ -42,7 +42,11 @@
             <section>
                 <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Kitchenware</h1>
                 <div class="flex flex-col lg:flex-row gap-6">
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Spoon Set', 139)" class="relative bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                        <div class="absolute left-2 top-28 -rotate-12 w-20">
+                            <img class="w-6 mx-auto" src="images/click.png" alt="">
+                            <p class="text-center font-medium text-[10px]">Click Card to<br>Add to Cart</p>
+                        </div>
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod1.png" alt="">
                         </div>
@@ -56,7 +60,7 @@
                         <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Spoon Set</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">139.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Bred Maker', 179)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod2.png" alt="">
                         </div>
@@ -70,7 +74,7 @@
                         <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Bred Maker</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">179.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Home Cooker', 225)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod3.png" alt="">
                         </div>
@@ -89,7 +93,7 @@
             <section class="mt-20 lg:mt-12">
                 <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Sportswear</h1>
                 <div class="flex flex-col lg:flex-row gap-6">
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Sports Back Cap', 69)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod4.png" alt="">
                         </div>
@@ -103,7 +107,7 @@
                         <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Sports Back Cap</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">69.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Full Jersey Set', 189)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod5.png" alt="">
                         </div>
@@ -117,7 +121,7 @@
                         <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Full Jersey Set</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">189.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Sports Cates', 159)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod6.png" alt="">
                         </div>
@@ -128,7 +132,7 @@
                             <i class="bi bi-star"></i>
                             <i class="bi bi-star"></i>
                         </div>
-                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Sports cates</h2>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Sports Cates</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">159.00 $</h2>
                     </aside>
                 </div>
@@ -136,7 +140,7 @@
             <section class="mt-20 lg:mt-12">
                 <h1 class="mb-4 font-semibold text-[#111111] text-3xl lg:text-2xl">Furniture</h1>
                 <div class="flex flex-col lg:flex-row gap-6">
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Single Relax Chair', 235)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod7.png" alt="">
                         </div>
@@ -150,7 +154,7 @@
                         <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Single Relax Chair</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">235.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Children Play', 215)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod8.png" alt="">
                         </div>
@@ -161,10 +165,10 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Children play</h2>
+                        <h2 class="text-[#111111] text-center font-semibold text-lg mt-0">Children Play</h2>
                         <h2 class="text-[#11111160] text-center font-semibold text-lg mt-0">215.00 $</h2>
                     </aside>
-                    <aside class="bg-[#FFFFFF] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
+                    <aside onclick="calculatePrice('Flexible Sofa', 299)" class="bg-[#FFFFFF] active:bg-[#FFFFFF50] rounded w-full lg:w-[250px] h-[400px] lg:h-auto p-3 pb-5">
                         <div class="bg-[#1111110e] flex items-center justify-center h-[260px] lg:h-[180px] rounded">
                             <img src="images/prod9.png" alt="">
                         </div>
@@ -185,17 +189,17 @@
             <section class="bg-[#FFFFFF] p-8 lg:p-3 rounded">
                 <h2 class="text-[#111111] font-semibold text-lg">Have coupon?</h2>
                 <div class="flex mt-2">
-                    <input class="border-solid border-[1px] border-[#11111150] rounded-l-lg p-2 w-[191px] lg:w-[147px]" type="text" placeholder="Coupon code">
-                    <button class="bg-[#E527B2] hover:opacity-80 active:bg-[#920b6e] px-3 font-medium text-white rounded-r-lg" type="submit">Apply</button>
+                    <input class="border-solid border-[1px] border-[#11111150] rounded-l-lg p-2 w-[191px] lg:w-[147px]" type="text" id="input-coupon-field" placeholder="Coupon code">
+                    <button class="bg-[#E527B2] hover:opacity-80 active:bg-[#920b6e] px-3 font-medium text-white rounded-r-lg" type="submit" onclick="getValidCoupon()">Apply</button>
                 </div>
             </section>
             <section class="bg-[#FFFFFF] p-8 lg:p-3 rounded">
-                <div class=""></div>
+                <div id="entryProduct"></div>
                 <div class="my-4 rounded bg-[#1111111f] h-[1px]"></div>
                 <div class="">
-                    <h2 class="text-[#111111] font-semibold text-lg">Total price : <span class="text-[#11111160]">00<span> $</span></span></h2>
-                    <h2 class="text-[#111111] font-semibold text-lg">Discount price : <span class="text-[#11111160]">00<span> $</span></span></h2>
-                    <h2 class="text-[#111111] font-semibold text-lg">Total : <span class="text-[#11111160]">00<span> $</span></span></h2>
+                    <h2 class="text-[#111111] font-semibold text-lg">Total price : <span id="total-price" class="text-[#11111160]">00</span><span class="text-[#11111160]"> $</span></h2>
+                    <h2 class="text-[#111111] font-semibold text-lg">Discount price : <span id="discount-price" class="text-[#11111160]">00</span><span class="text-[#11111160]"> $</span></h2>
+                    <h2 class="text-[#111111] font-semibold text-lg">Total : <span id="total" class="text-[#11111160]">00</span><span class="text-[#11111160]"> $</span></h2>
                 </div>
                 <div class="my-4 rounded bg-[#1111111f] h-[1px]"></div>
                 <button onclick="openModalWithDelay()" class="bg-[#E527B2] hover:opacity-80 active:bg-[#920b6e] w-full py-2 font-medium text-white rounded-lg" type="submit">Make Purchase</button>
