@@ -16,6 +16,7 @@ function calculatePrice(productName, productPrice) {
     totalPrice += productPrice;
     const totalPriceElement = document.getElementById("total-price");
     totalPriceElement.innerText = totalPrice;
+
     // Apply discount if valid coupon code is applied
     if (couponCode === "SELL200") {
         applyDiscount();
@@ -47,6 +48,9 @@ function calculatePrice(productName, productPrice) {
         entryProduct.appendChild(productDiv);
         productCounter++; // Increment the counter for the next product
     }
+
+    // Check if there are any products in the cart
+    togglePurchaseButton();
 }
 
 // Function-2: Use coupon
@@ -75,3 +79,22 @@ function setCouponCode() {
     const inputField = document.getElementById("input-coupon-field");
     inputField.value = "SELL200";
 }
+
+// Function-5: Toggle the "Make Purchase" button based on cart content
+function togglePurchaseButton() {
+    const entryProduct = document.getElementById("entryProduct");
+    const purchaseButton = document.getElementById("purchase-button");
+
+    if (entryProduct.children.length > 0) {
+        purchaseButton.disabled = false;
+        purchaseButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        purchaseButton.classList.add('hover:bg-pink-700', 'hover:border-pink-700');
+    } else {
+        purchaseButton.disabled = true;
+        purchaseButton.classList.add('opacity-50', 'cursor-not-allowed');
+        purchaseButton.classList.remove('hover:bg-pink-700', 'hover:border-pink-700');
+    }
+}
+
+// Initial check on page load
+togglePurchaseButton();
