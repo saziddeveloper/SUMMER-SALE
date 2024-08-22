@@ -75,8 +75,8 @@ function applyDiscount() {
         const discountAmount = (totalPrice * discountPercent) / 100;
         const discountedPrice = totalPrice - discountAmount;
         // Update discount and total in the DOM
-        document.getElementById("discount-price").innerText = `${discountAmount} $`;
-        document.getElementById("total").innerText = `${discountedPrice} $`;
+        document.getElementById("discount-price").innerText = `${discountAmount}`;
+        document.getElementById("total").innerText = `${discountedPrice}`;
     } else {
         // If totalPrice <= 200, no discount is applied
         document.getElementById("discount-price").innerText = `0 $`;
