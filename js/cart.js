@@ -33,7 +33,7 @@ function calculatePrice(productName, productPrice) {
         // If the product doesn't exist, create a new div for it
         const productDiv = document.createElement('div');
         productDiv.id = `product-${productName}`;
-        productDiv.className = "px-4 py-2 mb-2 bg-white rounded-lg border border-gray-200"; // Tailwind classes
+        productDiv.className = "px-3 py-2 mb-2 bg-white rounded-lg border border-gray-200"; // Tailwind classes
         productDiv.innerHTML = `
             <div class="flex items-center mb-1">
                 <span class="font-semibold text-lg mr-2">${productCounter}.</span>
