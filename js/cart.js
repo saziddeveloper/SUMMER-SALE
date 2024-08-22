@@ -15,7 +15,7 @@ function calculatePrice(productName, productPrice) {
     // Update the total price
     totalPrice += productPrice;
     const totalPriceElement = document.getElementById("total-price");
-    totalPriceElement.innerText = `${totalPrice} $`;
+    totalPriceElement.innerText = `${totalPrice}`;
     // Apply discount if valid coupon code is applied and totalPrice > 200
     if (couponCode === "SELL200" && totalPrice > 200) {
         applyDiscount();
