@@ -33,13 +33,20 @@ function calculatePrice(productName, productPrice) {
         // If the product doesn't exist, create a new div for it
         const productDiv = document.createElement('div');
         productDiv.id = `product-${productName}`;
-        productDiv.className = "px-3 py-2 mb-2 bg-white rounded-lg border border-gray-200"; // Tailwind classes
+        // Add extra class to the first productDiv
+        if (productCounter === 1) {
+            productDiv.className = "px-3 py-2 mb-2 bg-white rounded-lg border border-gray-200 extra-class"; // Add your extra class here
+        } else {
+            productDiv.className = "px-3 py-2 mb-2 bg-white rounded-lg border border-gray-200";
+        }
+        // Adjust the margin-left for the second div
+        const marginLeftValue = productCounter === 1 ? "21px" : "25px"; // Decrease by 4px for the first productDiv
         productDiv.innerHTML = `
             <div class="flex items-center mb-1">
                 <span class="font-semibold text-lg mr-2">${productCounter}.</span>
                 <span class="font-semibold text-lg text-gray-800 product-name">${productName}</span>
             </div>
-            <div class="flex ml-[25px] product-info">
+            <div class="flex ml-[${marginLeftValue}]">
                 <span class="text-gray-400 product-price text-lg">${productPrice} \$</span>
                 <span class="ml-2 text-gray-400 text-lg">X <span class="product-quantity text-lg ml-1">1</span></span>
             </div>
@@ -47,18 +54,6 @@ function calculatePrice(productName, productPrice) {
         entryProduct.appendChild(productDiv);
         productCounter++; // Increment the counter for the next product
     }
-    
-    // Check the number of product entries and adjust the margin if only one exists
-    if (entryProduct.children.length === 1) {
-        const productInfoDiv = entryProduct.querySelector('.product-info');
-        productInfoDiv.classList.replace('ml-[25px]', 'ml-[21px]');
-    } else {
-        const allProductInfoDivs = entryProduct.querySelectorAll('.product-info');
-        allProductInfoDivs.forEach(div => {
-            div.classList.replace('ml-[21px]', 'ml-[25px]');
-        });
-    }
-    
     // Check if there are any products in the cart
     togglePurchaseButton();
 }
