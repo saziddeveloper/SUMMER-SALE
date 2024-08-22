@@ -39,7 +39,7 @@ function calculatePrice(productName, productPrice) {
                 <span class="font-semibold text-lg mr-2">${productCounter}.</span>
                 <span class="font-semibold text-lg text-gray-800 product-name">${productName}</span>
             </div>
-            <div class="flex ml-[25px]">
+            <div class="flex ml-[25px] product-info">
                 <span class="text-gray-400 product-price text-lg">${productPrice} \$</span>
                 <span class="ml-2 text-gray-400 text-lg">X <span class="product-quantity text-lg ml-1">1</span></span>
             </div>
