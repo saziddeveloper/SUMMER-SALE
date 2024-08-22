@@ -40,7 +40,7 @@ function calculatePrice(productName, productPrice) {
             productDiv.className = "px-3 py-2 mb-2 bg-white rounded-lg border border-gray-200";
         }
         // Adjust the margin-left for the second div
-        const marginLeftValue = productCounter === 1 ? "21px" : "25px"; // Decrease by 4px for the first productDiv
+        const marginLeftValue = productCounter === 1 ? "22px" : "24px"; // Decrease by 4px for the first productDiv
         productDiv.innerHTML = `
             <div class="flex items-center mb-1">
                 <span class="font-semibold text-lg mr-2">${productCounter}.</span>
@@ -80,7 +80,7 @@ function applyDiscount() {
     } else {
         // If totalPrice <= 200, no discount is applied
         document.getElementById("discount-price").innerText = `0 $`;
-        document.getElementById("total").innerText = `${totalPrice} $`;
+        document.getElementById("total").innerText = `${totalPrice}`;
     }
 }
 
