@@ -47,6 +47,18 @@ function calculatePrice(productName, productPrice) {
         entryProduct.appendChild(productDiv);
         productCounter++; // Increment the counter for the next product
     }
+    
+    // Check the number of product entries and adjust the margin if only one exists
+    if (entryProduct.children.length === 1) {
+        const productInfoDiv = entryProduct.querySelector('.product-info');
+        productInfoDiv.classList.replace('ml-[25px]', 'ml-[21px]');
+    } else {
+        const allProductInfoDivs = entryProduct.querySelectorAll('.product-info');
+        allProductInfoDivs.forEach(div => {
+            div.classList.replace('ml-[21px]', 'ml-[25px]');
+        });
+    }
+    
     // Check if there are any products in the cart
     togglePurchaseButton();
 }
